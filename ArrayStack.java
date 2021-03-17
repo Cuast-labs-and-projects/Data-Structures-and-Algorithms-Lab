@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.NoSuchElementException;
 
-class stack {
+class Stack {
 
     private int arr[];
 
@@ -9,7 +9,7 @@ class stack {
 
     private int size;
 
-    public stack(int n) {
+    public Stack(int n) {
 
         size = n;
         top = -1;
@@ -57,7 +57,7 @@ class stack {
 
         if (isEmpty()) {
 
-            throw new NoSuchElementException("Overflow Exception");
+            throw new NoSuchElementException("Underflow Exception");
 
         }
         return arr[top--];
@@ -81,14 +81,14 @@ class stack {
 
 }
 
-public class arrayStack {
+public class ArrayStack {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Stack Enter the size of the stack");
+        System.out.println("Stack Enter the size of the Stack");
         int n = sc.nextInt();
-        stack stk = new stack(n);
+        Stack stk = new Stack(n);
         char ch;
 
         do {
@@ -143,10 +143,10 @@ public class arrayStack {
 
             }
             stk.display();
-            System.out.println("\nDo you want to continue (Type y or n) \n");
+            System.out.println("\nDo you want to continue (Type y or n) \n") ;
             ch = sc.next().charAt(0);
-            
-        } while (ch == 'Y' || ch == 'y');
+
+        }while(ch == 'y' || ch == 'Y');
 
         sc.close();
     }

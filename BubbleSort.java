@@ -1,9 +1,9 @@
 
 import java.util.Scanner;
 
-public class bubbleSort {
+public class BubbleSort {
 
-    void bubblesort(int arr[], int n) {
+    void Bubblesort(int arr[], int n) {
 
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - 1 - i; j++) {
@@ -18,7 +18,7 @@ public class bubbleSort {
 
     public static void main(String args[]) {
 
-        bubbleSort obj = new bubbleSort();
+        BubbleSort obj = new BubbleSort();
         Scanner s = new Scanner(System.in);
 
         System.out.println("enter the number of elements");
@@ -33,15 +33,16 @@ public class bubbleSort {
             arr[i] = s.nextInt();
         }
 
-        s.close();
-
-        obj.bubblesort(arr, n);
+        obj.Bubblesort(arr , n);
 
         System.out.println("the array after sorting is ...");
 
-        for (int i : arr) {
+        for(int i :arr) {
             System.out.println(i);
         }
+
+        s.close();
+
 
     }
 }
