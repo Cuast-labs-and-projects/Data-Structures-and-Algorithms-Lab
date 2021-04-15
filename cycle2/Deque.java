@@ -1,18 +1,20 @@
 import java.util.Scanner;
 
-
 class Deque {
     static class Node {
         int data;
         Node next, prev;
+
         public Node(int data) {
             this.data = data;
         }
     }
-        Node front = null;
-        Node rear = null;
-        int size = 0;
-        void insertFront(int x) {
+
+    Node front = null;
+    Node rear = null;
+    int size = 0;
+
+    void insertFront(int x) {
         Node node = new Node(x);
         if (front == null) {
             front = rear = node;
@@ -23,7 +25,8 @@ class Deque {
         }
         size++;
     }
-    private  void insertEnd(int x) {
+
+    private void insertEnd(int x) {
         Node node = new Node(x);
         if (rear == null) {
             front = rear = node;
@@ -34,7 +37,8 @@ class Deque {
         }
         size++;
     }
-    private  void deleteFront() {
+
+    private void deleteFront() {
         if (front == null) {
             return;
         }
@@ -46,7 +50,8 @@ class Deque {
         }
         size--;
     }
-    private  void deleteEnd() {
+
+    private void deleteEnd() {
         if (rear == null) {
             return;
         }
@@ -58,30 +63,33 @@ class Deque {
         }
         size--;
     }
-    private  int getFront() {
+
+    private int getFront() {
         if (front != null) {
             return front.data;
         }
         return -1;
     }
-    private  int getEnd() {
+
+    private int getEnd() {
         if (rear != null) {
             return rear.data;
         }
         return -1;
     }
-    private  boolean isEmpty() {
+
+    private boolean isEmpty() {
         if (front == null) {
             return true;
         }
         return false;
     }
-    
-    private  int size() {
+
+    private int size() {
         return size;
     }
-    
-    private  void erase() {
+
+    private void erase() {
         rear = null;
         while (front != null) {
             front.prev = null;
@@ -89,6 +97,7 @@ class Deque {
         }
         size = 0;
     }
+
     public static void main(String[] args) {
         char c;
         Scanner scan = new Scanner(System.in);
