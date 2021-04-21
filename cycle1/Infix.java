@@ -52,7 +52,6 @@ class Infix {
         return (!(c >= 'a' && c <= 'z') && !(c >= '0' && c <= '9') && !(c >= 'A' && c <= 'Z'));
     }
 
-
     static int Prec(char ch) {
         switch (ch) {
         case '+':
@@ -141,7 +140,7 @@ class Infix {
             } else if (c == '(') {
                 stack.push(c);
             } else {
-            
+
                 result.append(c);
             }
         }
