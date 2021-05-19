@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class Deque {
     static class Node {
         int data;
